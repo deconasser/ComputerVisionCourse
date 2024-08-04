@@ -1,1 +1,1 @@
-Open CV training Summer 2024
+Computer Vision training Summer 2024
