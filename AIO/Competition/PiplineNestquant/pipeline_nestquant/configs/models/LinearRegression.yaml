@@ -1,0 +1,21 @@
+# https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+
+fit_intercept: True
+# description: Whether to calculate the intercept for this model. If set to False, no intercept will be used in calculations (i.e. data is expected to be centered).
+# default: True
+# options: True, False
+
+copy_X: True
+# description: If True, X will be copied; else, it may be overwritten.
+# default: True
+# options: True, False
+
+n_jobs: 
+# description: The number of jobs to use for the computation.
+# default: None
+# options: int
+
+positive: False
+# description: When set to True, forces the coefficients to be positive. This option is only supported for dense arrays.
+# default: False
+# options: True, False

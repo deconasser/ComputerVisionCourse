@@ -1,0 +1,8 @@
+cd UTSF-Reborn/
+python -m virtualenv venv --python=3.10.10
+.\venv\Scripts\activate
+ls venv/bin/
+source venv/bin/activate
+pip install -r ./dependencies/requirements.txt
+source venv/bin/activate
+python train.py --dataConfigs="/home/aivn12gb/UTSF-Reborn/configs/datasets/nestquant/data.yaml" --all --lag=24

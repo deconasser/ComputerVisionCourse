@@ -1,0 +1,140 @@
+# https://xgboost.readthedocs.io/en/stable/parameter.html
+
+booster: "gbtree"
+# description: which booster to use
+# default: 'gbtree'
+# options: 'gbtree', 'gblinear', 'dart'
+
+verbosity: 2
+# description: verbosity of printing messages
+# default: 1
+# options: 0 (silent), 1 (warning), 2 (info), 3 (debug)
+
+validate_parameters: False
+# description: when set to True, XGBoost will perform validation of input parameters to check whether a parameter is used or not
+# default: False
+# options: True, False
+
+nthread:
+# description: number of parallel threads used to run XGBoost. When choosing it, please keep thread contention and hyperthreading in mind.
+# default: maximum number of threads available
+# options:
+
+disable_default_eval_metric: False
+# description: flag to disable default metric. Set to 1 or true to disable.
+# default: False
+# options: [True, False]
+
+num_feature:
+# description: set automatically by XGBoost, no need to be set by user
+# default:
+# options:
+
+eta: 0.01
+# alias: learning_rate
+# description: step size shrinkage used in update to prevents overfitting
+# default: 0.3
+# options: range [0, 1]
+
+gamma: 1
+# alias: min_split_loss
+# description: minimum loss reduction required to make a further partition on a leaf node of the tree. The larger gamma is, the more conservative the algorithm will be.
+# default: 0
+# options: range [0, inf]
+
+max_depth: 10
+# description: maximum depth of a tree. Increasing this value will make the model more complex and more likely to overfit. 0 indicates no limit on depth.
+# default: 6
+# options:range [0, inf]
+
+min_child_weight: 1
+# description: minimum sum of instance weight (hessian) needed in a child.
+# default: 1
+# options: range [0, inf]
+
+max_delta_step: 0
+# description: maximum delta step we allow each leaf output to be.
+# default: 0
+# options: range [0, inf]
+
+subsample: 1
+# description: subsample ratio of the training instances
+# default: 1
+# options: range (0, 1]
+
+lambda: 1
+# alias: reg_lambda
+# description: L2 regularization term on weights. Increasing this value will make model more conservative.
+# default: 1
+# options:
+
+alpha: 0
+# alias: reg_alpha
+# description: L1 regularization term on weights. Increasing this value will make model more conservative.
+# default: 0
+# options:
+
+tree_method: "gpu_hist"
+# description: the tree construction algorithm used in XGBoost
+# default: 'auto'
+# options:
+
+scale_pos_weight: 1
+# description: control the balance of positive and negative weights, useful for unbalanced classes
+# default: 1
+# options:
+
+updater:
+# description:
+# default:
+# options:
+
+refresh_leaf: 1
+# description: this is a parameter of the refresh updater When this flag is 1, tree leafs as well as tree nodes’ stats are updated. When it is 0, only node stats are updated.
+# default: 1
+# options: 0, 1
+
+process_type: "default"
+# description: a type of boosting process to run.
+# default: 'default'
+# options: 'default', 'update'
+
+grow_policy: "depthwise"
+# description: controls a way new nodes are added to the tree.
+# default: 'depthwise'
+# options: 'depthwise', 'lossguide'
+
+max_leaves: 0
+# description: maximum number of nodes to be added. Not used by exact tree method.
+# default: 0
+# options:
+
+max_bin: 256
+# description: maximum number of discrete bins to bucket continuous features. Increasing this number improves the optimality of splits at the cost of higher computation time.
+# default: 256
+# options:
+
+predictor: "auto"
+# description: the type of predictor algorithm to use.
+# default: 'auto'
+# options: 'auto', 'cpu_predictor', 'gpu_predictor'
+
+num_parallel_tree: 1
+# description: number of parallel trees constructed during each iteration
+# default: 1
+# options:
+
+monotone_constraints:
+# description:
+# default:
+# options:
+
+interaction_constraints:
+# description:
+# default:
+# options:
+
+n_estimators: 1000
+# description:
+# default: 200
+# options:
